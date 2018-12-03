@@ -1,0 +1,21 @@
+[package]
+name = "dscfg"
+version = "0.1.0"
+authors = ["Martin Habovstiak <martin.habovstiak@gmail.com>"]
+description = "Facade for dynamic shared configuration client and server"
+homepage = "https://github.com/Kixunil/dscfg"
+repository = "https://github.com/Kixunil/dscfg"
+readme = "README.md"
+keywords = ["configuration", "shared", "ipc", "protocol"]
+categories = ["config", "network-programming"]
+license = "MITNFA"
+maintenance = { status = "passively-maintained" }
+
+[features]
+default = ["client", "server"]
+client = ["dscfg-client"]
+server = ["dscfg-server"]
+
+[dependencies]
+dscfg-client = { version = "0.1", optional = true }
+dscfg-server = { version = "0.1", optional = true }

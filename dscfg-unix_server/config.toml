@@ -1,0 +1,17 @@
+[general]
+name = "dscfgd"
+summary = "Serves dynamic configuration over Unix domain socket."
+doc = "This program serves shared configuration to other services that might be interested in it. It provides the configuration over Unix socket and stores it in a simple file as a Json. Storing is done atomically in order to not corrupt the configuration. So at worst some changes won't be applied in case of power failures."
+env_prefix = "DSCFG"
+ 
+[[param]]
+name = "file"
+type = "::std::path::PathBuf"
+optional = false
+doc = "A file in which to store the configuration."
+
+[[param]]
+name = "socket"
+type = "::std::path::PathBuf"
+optional = false
+doc = "Path to which DSCFG socket should be bound."

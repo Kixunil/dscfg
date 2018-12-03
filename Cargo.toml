@@ -1,0 +1,7 @@
+[workspace]
+members = ["dscfg", "dscfg-proto", "dscfg-server", "dscfg-client", "dscfg-cached_file_storage", "dscfg-unix_server", "dscfg-unix_util"]
+
+[dependencies]
+futures = "0.1"
+tokio-io = "0.1"
+tokio-core = "0.1"
